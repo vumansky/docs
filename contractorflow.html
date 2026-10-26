@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ContractorFlow</title>
+  <meta name="description" content="ContractorFlow turns a request for work into a qualified lead, a draft reply, and an estimate the owner approves. Invoices go out through Stripe.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,640;12..96,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="band">
+    <div class="wrap bar">
+      <a href="index.html">Projects</a>
+      <span>ContractorFlow</span>
+    </div>
+    <div class="wrap hero">
+      <div>
+        <h1>The mail is sorted before you park the truck.</h1>
+        <p class="lede">ContractorFlow turns a request for flooring, tile, or paint into a qualified lead, a draft reply, and an estimate you approve. Two agents do the reading. You approve every word a customer sees, and every price.</p>
+      </div>
+      <div class="phone" aria-label="The Needs you queue, as the owner sees it">
+        <div class="phone-top"><span>9:41</span><span>Ridgeline Floors</span></div>
+        <div class="screen">
+          <p class="kicker">5 waiting</p>
+          <h2>Needs you</h2>
+          <div class="row">
+            <b>Priya Raman</b>
+            <span>Flooring for 2 bedrooms and the living room</span>
+            <span class="tag">Draft to send</span>
+          </div>
+          <div class="row">
+            <b>Maple Dental</b>
+            <span>A second email from a shared office address</span>
+            <span class="tag">Possible duplicate</span>
+          </div>
+          <div class="row">
+            <b>Estimate 1045</b>
+            <span>$8,640, over the assistant's limit</span>
+            <span class="tag">Owner only</span>
+          </div>
+        </div>
+        <div class="tabs" aria-hidden="true">
+          <b>Queue</b><span>Inbox</span><span>Import</span><span>Jobs</span><span>Invoices</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <nav class="jump" aria-label="On this page">
+      <a href="#journey">Journey</a>
+      <a href="#agents">Agents</a>
+      <a href="#screens">Screens</a>
+      <a href="#decide">What you decide</a>
+    </nav>
+  </div>
+
+  <main class="wrap">
+    <section id="journey">
+      <h2>One request, five stops</h2>
+      <ol class="stages">
+        <li>
+          <h3>Import</h3>
+          <span class="who">You, or a scan of the inbox</span>
+          <p>Each message is read before anything is saved. You see who sent it, whether the mailbox is one person or a shared office address, and whether it joins a lead you already have.</p>
+        </li>
+        <li>
+          <h3>Sort</h3>
+          <span class="who">Triage agent</span>
+          <p>A real request becomes a lead with a checklist: rooms, size, timing, address. A newsletter is left alone. A message that tries to instruct the agent is quarantined, with no draft.</p>
+        </li>
+        <li>
+          <h3>Reply</h3>
+          <span class="who">Reply agent, then you</span>
+          <p>The draft asks only what the checklist is still missing. It sits in the conversation until you send it, edit it, or take the thread over and write it yourself.</p>
+        </li>
+        <li>
+          <h3>Estimate</h3>
+          <span class="who">You, from your rate book</span>
+          <p>The first estimate turns the lead into a job. Suggested lines use rates you already approved. A line with no rate has no price. Approving records that exact version.</p>
+        </li>
+        <li>
+          <h3>Invoice</h3>
+          <span class="who">You, then Stripe</span>
+          <p>After you record that the customer accepted, you can invoice a deposit and the rest. The customer pays on Stripe's page. A refund stays a task for you.</p>
+        </li>
+      </ol>
+      <p class="aim">The aim is a business day: a real inquiry gets a next step, a no with a reason, or a handoff to you. That clock is the product's target, not a number the app measures yet.</p>
+    </section>
+
+    <section id="agents">
+      <h2>Two agents. The rest is rules.</h2>
+      <div class="pair">
+        <article>
+          <h3>Triage</h3>
+          <p>Reads one message and says how sure it is that this is work you offer. It pulls out only facts the sender wrote, and quotes the words it used. A size it is unsure of stays flagged on the lead, so you can see the soft spot.</p>
+        </article>
+        <article>
+          <h3>Reply</h3>
+          <p>Writes a short note in the voice of the shop. It cannot name a price, a discount, a start date, or a time you can visit, and it does not say it is an AI. A draft that slips and makes a promise is thrown out. A plain template is offered instead.</p>
+        </article>
+      </div>
+      <p class="note">Who the customer is, which lead an email joins, the estimate math, and the Stripe invoice are ordinary code, not a model. If Claude is unavailable, a rule-based reader still sorts the mail and the screen tells you which one answered.</p>
+    </section>
+
+    <section id="screens">
+      <h2>Five places, one thumb</h2>
+      <ul class="screen-list">
+        <li>
+          <h3>Needs you</h3>
+          <p>The home screen. Drafts to send, customers to confirm, estimates over a helper's limit, invoices that need a retry. Most urgent first.</p>
+        </li>
+        <li>
+          <h3>Inbox</h3>
+          <p>The conversation stays with the lead. A draft is visibly unsent, with a note of what the agent used and what it refused to say. You send, edit, reject, or take over.</p>
+        </li>
+        <li>
+          <h3>Import</h3>
+          <p>Scan the connected inbox, or type a field note for something you heard on site when there is no email yet. Pasting a message is there for trying the flow.</p>
+        </li>
+        <li>
+          <h3>Jobs</h3>
+          <p>Rooms, lines, and a total you can stand behind. Change the lines after you approve and that approval no longer applies, so an old price cannot go out by accident.</p>
+        </li>
+        <li>
+          <h3>Invoices</h3>
+          <p>Deposit and remainder, each tied to one estimate so a retry cannot create a second bill. Stripe emails the customer on file. Refresh payment reads what Stripe already knows.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="decide">
+      <h2>What never leaves without you</h2>
+      <div class="decide">
+        <article>
+          <h3>A customer-facing word</h3>
+          <p>Sorting a message and drafting a reply can happen before you look. Sending it cannot. A cover note may quote the approved total and no other amount, and only while the lines still match that approval.</p>
+        </article>
+        <article>
+          <h3>A price</h3>
+          <p>You approve an exact version: the lines, the total, and the time. A helper can draft an estimate. If you allow them to approve, they still stop at the limit you set. Over it, the estimate waits on your queue.</p>
+        </article>
+        <article>
+          <h3>Who the customer is</h3>
+          <p>A personal mailbox can join its open lead. A shared address such as office@ cannot, until you say it is one person. A possible duplicate offers merge or keep separate. No agent makes that call.</p>
+        </article>
+        <article>
+          <h3>Money</h3>
+          <p>You record that the customer accepted, and you decide to invoice. The customer pays on Stripe's page. ContractorFlow does not store a card or move the money, and nothing in the app can issue a refund.</p>
+        </article>
+      </div>
+      <p class="note">An office assistant is not a second login yet. You can preview the day as they would see it: drafts and estimate drafts, not invoices, not the rules, and not the customer's yes.</p>
+    </section>
+
+    <p class="foot">Ridgeline Floors is the fictional shop in the working prototype, and Dana is its owner. The people, addresses, and prices on this page are that demo. The walkthrough describes the product as it runs: not a ledger, a calendar, or a customer portal.</p>
+  </main>
+</body>
+</html>
